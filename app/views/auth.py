@@ -49,7 +49,10 @@ def login_post(body: Login_Model):
 
     if user is None:
         logger.info(f'User "{body.username}" does not exist. Please, sign up.')
-        return ResponseMessage(success=False, description=f'User "{body.username}" does not exist. Please, sign up.').json(), 409
+        return ResponseMessage(
+            success=False,
+            description=f'User "{body.username}" does not exist. Please, sign up.'
+        ).json(), 409
 
     if not check_password_hash(user.password, body.password):
         logger.info(f'User with email "{body.email}" entered wrong password')
