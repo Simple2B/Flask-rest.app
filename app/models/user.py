@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from flask_login import UserMixin, AnonymousUserMixin
 from sqlalchemy import func
 from sqlalchemy.ext.hybrid import hybrid_property

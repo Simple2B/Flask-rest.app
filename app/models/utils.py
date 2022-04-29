@@ -14,7 +14,7 @@ class ModelMixin(object):
         db.session.delete(self)
         db.session.commit()
         return self
-    
+
     @classmethod
     def clean(cls):
         # Delete all the models from the database
