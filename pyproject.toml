@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "flask.app"
+version = "0.1.0"
+description = ""
+authors = ["Petros <Xavrais312@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+loguru = "^0.5.3"
+pydantic = "^1.8.2"
+flask-openapi3 = "^0.9.8"
+Flask-JWT-Extended = "^4.3.1"
+black = "^21.11b1"
+flake8 = "^4.0.1"
+python-dotenv= "^0.19.2"
+psycopg2-binary= "^2.9.2"
+Flask-SQLAlchemy = "^2.5.1"
+Flask-Migrate = "^3.1.0"
+Flask-Login = "^0.5.0"
+Flask = "^2.0.2"
+celery = "^5.2.6"
+redis = "^4.2.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
