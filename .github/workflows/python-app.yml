@@ -11,7 +11,9 @@ on:
 
 jobs:
   tests:
-    runs-on: self-hosted
+
+    runs-on: linux
+
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
