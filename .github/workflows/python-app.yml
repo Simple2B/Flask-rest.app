@@ -3,12 +3,6 @@
 
 name: Simple Flask Application
 
-on:
-  push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main, develop ]
-
 jobs:
   tests:
 
