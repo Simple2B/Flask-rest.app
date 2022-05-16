@@ -39,5 +39,6 @@ jobs:
     steps:
     # - uses: actions/checkout@v2
     - name: 'Build new image'
-      run: echo "Build..."
-      run: echo "build finished"
+      run: |
+        echo "Build..."
+        echo "Build completed"
