@@ -32,6 +32,7 @@ def test_auth_pages(client):
 
 
 def test_register(client):
+    assert 1 == 3
     response = client.post(
         "/register",
         json=dict(
@@ -40,22 +41,3 @@ def test_register(client):
             password="password",
         ), follow_redirects=True,)
     assert b"Registration successful." in response.data
-
-# def test_login_and_logout(client):
-#     # Access to logout view before login should fail.
-#     response = logout(client)
-#     assert b"Missing JWT" in response.data
-#     register("sam")
-#     response = login(client, username="sam")
-#     assert b"Logged in" in response.data
-#     # Should successfully logout the currently logged in user.
-#     # response = logout(client)
-#     # print(response.data)
-#     response = client.get("/api/logout")
-#     assert b"Logout form" in response.data
-#     # Incorrect login credentials should fail.
-#     response = login(client, username="sam", password="wrongpassword")
-#     assert b"Wrong password" in response.data
-#     # Correct credentials should login
-#     response = login(client, username="sam")
-#     assert b"Logged in" in response.data
