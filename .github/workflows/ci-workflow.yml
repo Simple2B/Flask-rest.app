@@ -11,6 +11,7 @@ jobs:
       - name: poetry install
         run: |
           poetry install
+          source .venv/bin/activate
       - name: pylint check
         run: |
           python -m poetry run flake8 . --count  --show-source --statistics
