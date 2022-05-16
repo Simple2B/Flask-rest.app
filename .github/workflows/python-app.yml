@@ -35,7 +35,9 @@ jobs:
       run: |
         python -m poetry run pytest
   build:
-    - name: Build new image
-    - run: |
-        echo "Build..."
-        echo "Build end"
+    runs-on: linux
+    steps:
+      - name: Build new image
+      - run: |
+          echo "Build..."
+          echo "Build end"
