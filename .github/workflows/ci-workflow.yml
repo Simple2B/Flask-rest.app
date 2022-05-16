@@ -1,0 +1,16 @@
+name: Python test/build/deploy CI/CD
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  test:
+    runs-on: linux
+    steps:
+      - name: pylint check
+        run: |
+          echo "Pylint checking..."
+      - name: run tests
+        run: |
+          echo "Running tests"
