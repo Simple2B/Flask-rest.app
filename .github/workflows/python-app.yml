@@ -36,8 +36,8 @@ jobs:
         python -m poetry run pytest
   build:
     runs-on: linux
+    needs: [tests]
     steps:
-    - need: [tests]
     - name: 'Build new image'
       run: |
         echo "Build..."
