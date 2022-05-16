@@ -8,6 +8,9 @@ jobs:
   test:
     runs-on: linux
     steps:
+      - name: poetry install
+        run: |
+          poetry -v
       - name: pylint check
         run: |
           echo "Pylint checking..."
