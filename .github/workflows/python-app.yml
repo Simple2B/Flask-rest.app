@@ -39,4 +39,4 @@ jobs:
     steps:
     # - uses: actions/checkout@v2
     - run: echo "Build..."
-    - name: Build new image
+    - name: 'Build new image'
