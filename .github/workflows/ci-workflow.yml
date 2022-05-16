@@ -18,7 +18,7 @@ jobs:
         with:
           poetry-version: 1.1.2
       - name: Configure poetry
-        shell: bash
+        # shell: bash
         run: python -m poetry config virtualenvs.in-project true
       - name: View poetry version
         run: poetry --version
