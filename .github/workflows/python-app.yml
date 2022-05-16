@@ -39,7 +39,7 @@ jobs:
         echo "Hello" >> some_file.txt
   build:
     runs-on: linux
-    needs: [tests]
+    # needs: [tests]
     steps:
     - name: 'Build new image'
       run: |
