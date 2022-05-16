@@ -8,21 +8,23 @@ jobs:
   test:
     runs-on: linux
     steps:
-      - name: Set up python
+     runs-on: linux
+     steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - name: Poetry install
+      - name: Install Python Poetry
         uses: abatilo/actions-poetry@v2.1.0
         with:
           poetry-version: 1.1.2
-      - name: Poetry config
+      - name: Configure poetry
+        shell: bash
         run: python -m poetry config virtualenvs.in-project true
-      - name: Petry install
+      - name: Install dependencies
         run: python -m poetry install
-      - name: Pylint check
-        run: |
-          python -m poetry run flake8 . --count  --show-source --statistics
+      - name: Lint with flake8
+        run: python -m poetry run flake8 . --count  --show-source --statistics
       - name: run tests
-        run: |
-          echo "Running tests"
+        run: echo "Running tests"
