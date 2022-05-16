@@ -3,7 +3,7 @@
 
 name: Simple Flask Application
 
-on: [push, pull]
+on: [push, pull_request]
 
 jobs:
   tests:
