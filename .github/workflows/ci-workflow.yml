@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: poetry install
         run: |
-          poetry -v
+          poetry config --list
       - name: pylint check
         run: |
           echo "Pylint checking..."
