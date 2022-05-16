@@ -38,5 +38,5 @@ jobs:
     runs-on: linux
     steps:
       - uses: actions/checkout@v2
-      - name: Build new image
+      - name: "Build new image"
       - run: echo "Build..."
