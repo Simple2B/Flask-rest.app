@@ -11,12 +11,10 @@ jobs:
       - name: poetry install
         run: |
           poetry install
-          ls -a
-          pwd
-          source .venv/bin/activate
+          poetry add flake8
       - name: pylint check
         run: |
-          python -m poetry run flake8 . --count  --show-source --statistics
+          .venv/bin/python -m flake8 . --count  --show-source --statistics
       - name: run tests
         run: |
           echo "Running tests"
