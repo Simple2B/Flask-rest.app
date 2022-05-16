@@ -21,11 +21,15 @@ jobs:
           poetry-version: 1.1.2
       - name: Configure poetry
         shell: bash
-        run: |
-          python -m poetry config virtualenvs.in-project true
+        run: python -m poetry config virtualenvs.in-project true
+      - name: View poetry version
+        run: poetry --version
       - name: Install dependencies
         run: |
           python -m poetry install
       - name: Lint with flake8
         run: |
           python -m poetry run flake8 . --count  --show-source --statistics
+      - name: Test with pytest
+        run: |
+          python -m poetry run pytest
