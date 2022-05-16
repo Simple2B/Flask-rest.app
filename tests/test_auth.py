@@ -32,7 +32,6 @@ def test_auth_pages(client):
 
 
 def test_register(client):
-    assert 1 == 3
     response = client.post(
         "/register",
         json=dict(
