@@ -11,11 +11,9 @@ jobs:
       - name: poetry install
         run: |
           poetry install
-          poetry add --dev pylint
-          poetry add --dev pytest
       - name: pylint check
         run: |
-          echo "Pylint checking..."
+          poetry run flake8 . --count  --show-source --statistics
       - name: run tests
         run: |
           echo "Running tests"
