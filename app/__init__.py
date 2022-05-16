@@ -11,12 +11,16 @@ db = SQLAlchemy()
 migrate = Migrate()
 
 
+
+
 def create_app(environment="development"):
 
     from config import config
     from app.models import (
         User,
     )
+
+
 
     # Instantiate app.
     info = Info(title='Skelet API', version='1.0.0')
