@@ -3,17 +3,11 @@
 
 name: Simple Flask Application
 
-on:
-  push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main, develop ]
+on: [push, pull_request]
 
 jobs:
   tests:
-
     runs-on: linux
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
